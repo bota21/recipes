@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <meta name="description" content="Моя домашняя книга рецептов" />
+    <title>Моя книга рецептов</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Главная страница">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span><strong>Моя книга</strong><small>рецепты с душой</small></span>
+      </a>
+      <span class="header-note">Домашняя коллекция</span>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <p class="eyebrow">МОЯ КУХНЯ · МОИ РЕЦЕПТЫ</p>
+        <h1>Что приготовим сегодня?</h1>
+        <p>Проверенные рецепты, любимые вкусы и немного домашнего уюта.</p>
+        <label class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="search"
+            type="search"
+            placeholder="Найти блюдо…"
+            aria-label="Поиск по рецептам"
+          />
+        </label>
+      </section>
+
+      <nav class="tabs" aria-label="Разделы рецептов" role="tablist">
+        <button
+          class="tab active"
+          role="tab"
+          aria-selected="true"
+          data-category="all"
+        >
+          Все рецепты <span>3</span>
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          data-category="bakery"
+        >
+          Выпечка
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          data-category="main"
+        >
+          Гарниры
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          data-category="drinks"
+        >
+          Напитки
+        </button>
+      </nav>
+
+      <section class="recipe-section" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">КОЛЛЕКЦИЯ</p>
+            <h2 id="list-title">Все рецепты</h2>
+          </div>
+          <span class="count" id="recipe-count">3 рецепта</span>
+        </div>
+        <div class="recipe-list" id="recipe-list">
+          <!-- Выпечка -->
+          <button
+            class="recipe-card"
+            data-recipe="ciabatta"
+            data-category="bakery"
+          >
+            <img
+              src="img/ciabatta.jpg"
+              alt="Чиабатта с хрустящей корочкой"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=900&q=80'
+              "
+            />
+            <span class="card-copy"
+              ><span class="card-category">ВЫПЕЧКА</span
+              ><strong>Домашняя чиабатта</strong
+              ><span class="card-meta">Время: 4-6 часов</span
+              ><span class="card-link">Открыть рецепт <b>↗</b></span></span
+            >
+          </button>
+          <button
+            class="recipe-card"
+            data-recipe="dough"
+            data-category="bakery"
+          >
+            <img
+              src="img/dough.jpg"
+              alt="Тесто для мант"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=900&q=80'
+              "
+            />
+            <span class="card-copy"
+              ><span class="card-category">ВЫПЕЧКА</span
+              ><strong>Тесто для мант</strong
+              ><span class="card-meta">Время: 25 мин </span
+              ><span class="card-link">Открыть рецепт <b>↗</b></span></span
+            >
+          </button>
+          <button
+            class="recipe-card"
+            data-recipe="potatoes"
+            data-category="main"
+          >
+            <img
+              src="img/potatoes.jpg"
+              alt="Запечённые картофельные дольки"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80'
+              "
+            />
+            <span class="card-copy"
+              ><span class="card-category">ГАРНИРЫ</span
+              ><strong>Запечённые картофельные дольки</strong
+              ><span class="card-meta">Время: 60 мин</span
+              ><span class="card-link">Открыть рецепт <b>↗</b></span></span
+            >
+          </button>
+          <button class="recipe-card" data-recipe="tea" data-category="drinks">
+            <img
+              src="img/tea.png"
+              alt="Домашний чай с фруктами"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80'
+              "
+            />
+            <span class="card-copy"
+              ><span class="card-category">НАПИТКИ</span
+              ><strong>Домашний чай с фруктами</strong
+              ><span class="card-meta">Время: 10–15 мин</span
+              ><span class="card-link">Открыть рецепт <b>↗</b></span></span
+            >
+          </button>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>
+          Ничего не найдено. Попробуйте другое название.
+        </p>
+      </section>
+
+      <section class="detail" id="recipe-detail" hidden aria-live="polite">
+        <button class="back-button" id="back-button">← Ко всем рецептам</button>
+        <article id="detail-content"></article>
+      </section>
+    </main>
+
+    <footer>
+      <span>✳ Моя книга рецептов</span
+      ><span>Собрано дома, приготовлено с любовью</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
