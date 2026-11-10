@@ -81,7 +81,7 @@ const recipes = {
   cauliflower: {
     title: "Запечённая цветная капуста с тахини и лимоном",
     category: "Гарниры",
-    image: "img/tsevetnaya_kapusta.jpg",
+    image: "img/cauliflower.jpg",
     fallback:
       "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1400&q=85",
     description:
