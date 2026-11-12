@@ -208,8 +208,8 @@ function updateList() {
       activeCategory === "all" || card.dataset.category === activeCategory;
     const matchesSearch =
       recipe.title.toLocaleLowerCase("ru").includes(query) ||
-      recipe.category.toLocaleLowerCase("ru").includes(query) ||
-      recipe.description.toLocaleLowerCase("ru").includes(query);
+      recipe.category.toLocaleLowerCase("ru").includes(query);
+    // || recipe.description.toLocaleLowerCase("ru").includes(query);
     const visible = matchesCategory && matchesSearch;
     card.hidden = !visible;
     if (visible) shown++;
