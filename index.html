@@ -58,9 +58,17 @@
           class="tab"
           role="tab"
           aria-selected="false"
-          data-category="main"
+          data-category="main-course"
         >
-          Гарниры
+          Основные блюда
+        </button>
+        <button
+          class="tab"
+          role="tab"
+          aria-selected="false"
+          data-category="sauces"
+        >
+          Соусы
         </button>
         <button
           class="tab"
@@ -82,6 +90,7 @@
         </div>
         <div class="recipe-list" id="recipe-list">
           <!-- Выпечка -->
+          <!-- Домашняя чиабатта -->
           <button
             class="recipe-card"
             data-recipe="ciabatta"
@@ -102,6 +111,7 @@
               ><span class="card-link">Открыть рецепт <b>↗</b></span></span
             >
           </button>
+          <!-- Тесто для мант -->
           <button
             class="recipe-card"
             data-recipe="dough"
@@ -122,10 +132,12 @@
               ><span class="card-link">Открыть рецепт <b>↗</b></span></span
             >
           </button>
+          <!-- Основные блюда -->
+          <!-- Запечённые картофельные дольки -->
           <button
             class="recipe-card"
             data-recipe="potatoes"
-            data-category="main"
+            data-category="main-course"
           >
             <img
               src="img/potatoes.jpg"
@@ -136,32 +148,57 @@
               "
             />
             <span class="card-copy"
-              ><span class="card-category">ГАРНИРЫ</span
+              ><span class="card-category">Основные блюда</span
               ><strong>Запечённые картофельные дольки</strong
               ><span class="card-meta">Время: 60 мин</span
               ><span class="card-link">Открыть рецепт <b>↗</b></span></span
             >
           </button>
+          <!-- Запечённая цветная капуста с тахини и лимоном -->
           <button
             class="recipe-card"
             data-recipe="cauliflower"
-            data-category="main"
+            data-category="main-course"
           >
             <img
               src="img/cauliflower.jpg"
-              alt="Запечённые картофельные дольки"
+              alt="Запечённая цветная капуста с тахини и лимоном"
               onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80'
               "
             />
             <span class="card-copy"
-              ><span class="card-category">ГАРНИРЫ</span
+              ><span class="card-category">Основные блюда</span
               ><strong>Запечённая цветная капуста с тахини и лимоном</strong
               ><span class="card-meta">Время: 40 мин</span
               ><span class="card-link">Открыть рецепт <b>↗</b></span></span
             >
           </button>
+          <!-- Соусы -->
+          <!-- Соус с тахини -->
+          <button
+            class="recipe-card"
+            data-recipe="tahini"
+            data-category="sauces"
+          >
+            <img
+              src="img/tahini.jpg"
+              alt="Соус с тахини"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80'
+              "
+            />
+            <span class="card-copy"
+              ><span class="card-category">Соусы</span
+              ><strong>Соус с тахини</strong
+              ><span class="card-meta">Время: 10 мин</span
+              ><span class="card-link">Открыть рецепт <b>↗</b></span></span
+            >
+          </button>
+          <!-- НАПИТКИ -->
+          <!-- Домашний чай с фруктами -->
           <button class="recipe-card" data-recipe="tea" data-category="drinks">
             <img
               src="img/tea.png"
@@ -174,7 +211,7 @@
             <span class="card-copy"
               ><span class="card-category">НАПИТКИ</span
               ><strong>Домашний чай с фруктами</strong
-              ><span class="card-meta">Время: 10 мин</span
+              ><span class="card-meta">Время: 30 мин</span
               ><span class="card-link">Открыть рецепт <b>↗</b></span></span
             >
           </button>
